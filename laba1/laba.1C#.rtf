@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 using System;\
+using System.Collections.Generic;\
+using System.Linq;\
+using System.Text;\
+using System.Threading.Tasks;\
+\
+namespace lab1\
+\{\
+    class Program\
+    \{\
+        static void Main(string[] args)\
+        \{\
+            int nn, nk, k;\
+            double res = 0;\
+            Console.WriteLine("\uc0\u1054 \u1090 ?");\
+            nn = int.Parse(Console.ReadLine());\
+            Console.WriteLine("\uc0\u1044 \u1086 ?");\
+            nk = int.Parse(Console.ReadLine());\
+            for (k = nn; k <= nk; k++)\
+            \{\
+                res += (Math.Pow(k, 2) + Math.Pow(-1, Math.Pow(k, 2) + Math.Pow(-1, k) * k) * k) / (3 * Math.Pow(k, 2) + 5);\
+            \}\
+            Console.WriteLine($"\uc0\u1054 \u1090 \u1074 \u1077 \u1090 : \{res\}");\
+            Console.ReadKey();\
+        \}\
+    \}\
+\}}
